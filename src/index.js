@@ -1,14 +1,15 @@
-import { BrowserRouter, routes, route} from "react-router-dom";
-import { createRoot} from "react-router-dom/clients";
-import app from "./app";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createRoot  } from 'react-dom/client';
+import App from './App';
 
-const root = createRoot (rootElement);
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
 root.render(
   <BrowserRouter>
-      <routes>
-        <route path="/*" element={<app/>}></route>
-      </routes> 
-  
+    <Routes>
+      <Route path="/*" element={<App />}></Route>
+    </Routes>
   </BrowserRouter>
-)
+);
+
